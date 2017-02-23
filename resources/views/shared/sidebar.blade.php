@@ -1,0 +1,41 @@
+<!-- ========== Left Sidebar Start ========== -->
+
+<div class="left side-menu">
+    <div class="sidebar-inner slimscrollleft">
+        <!--- Divider -->
+        <div id="sidebar-menu">
+            <ul>
+
+                <li class="text-muted menu-title">Navigation</li>
+
+                <li class="has_sub">
+                    <a href="index.html" class="waves-effect"><i class="fa fa-home"></i> <span> Home </span> </a>
+                </li>
+
+                <li class="has_sub">
+                    <a href="javascript:void(0);" class="waves-effect"><i class="fa fa-newspaper-o"></i> <span> Articles </span> <span class="menu-arrow"></span> </a>
+                    <ul class="list-unstyled">
+                        <li><a href="{{url(route('article.create'))}}">Create new</a></li>
+                        <li><a href="ui-cards.html">View All Articles</a></li>
+
+                    </ul>
+                </li>
+                <li class="has_sub">
+                    <a href="javascript:void(0);" class="waves-effect"><i class="fa fa-comments"></i> <span> Comment </span> <span class="menu-arrow"></span> </a>
+                    <ul class="list-unstyled">
+                        <li><a href="ui-buttons.html">View Comments</a></li>
+
+
+                    </ul>
+                </li>
+
+
+
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+
+    </div>
+</div>
+<!-- Left Sidebar End -->
