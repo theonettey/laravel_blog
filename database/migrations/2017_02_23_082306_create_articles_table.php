@@ -18,14 +18,14 @@ class CreateArticlesTable extends Migration
             $table->string('title',20);
             $table->string('description',149);
             $table->text('body');
-            $table->integer('user_id');
+            $table->integer('user_id')->unsigned();
             $table->timestamps();
             $table->softDeletes();
 
-//            $table->foreign('user_id')
-//                ->references('id')
-//                ->on('users')
-//                ->onDelete('cascade');
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade');
         });
     }
 
