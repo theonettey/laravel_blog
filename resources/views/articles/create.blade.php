@@ -7,7 +7,7 @@
             {!! Form::open(['route'=>'article.store','class'=>'form form-horizontal']) !!}
             <div class="form-group {{ $errors->has('title') ? ' has-error' : '' }}">
                 {!! Form::label('title','Title',null,['class'=>'control-label']) !!}
-                {!! Form::text('title',null,['class'=>'form-control' ]) !!}
+                {!! Form::text('title','',['class'=>'form-control']) !!}
                 @if ($errors->has('title'))
                     <span class="help-block">
                         <strong>{{ $errors->first('title') }}</strong>
