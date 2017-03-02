@@ -18,7 +18,9 @@ class ArticleController extends Controller
     public function index()
     {
         //
-        return "Saved Article";
+        $articles = Article::with('User')->latest()->get();
+//        dd($articles);
+        return view('welcome',compact('articles'));
     }
 
     /**
@@ -46,7 +48,7 @@ class ArticleController extends Controller
         $data->body =$request->body;
         $data->description =$request->description;
         $data->save();
-
+        \Session::flash('success','Article created successfully');
         return redirect(route('article.index'));
     }
 

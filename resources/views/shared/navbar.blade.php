@@ -54,10 +54,20 @@
                         </a>
 
                         <ul class="dropdown-menu">
-                            <li><a href="javascript:void(0)"><i class="ti-user m-r-5"></i> Profile</a></li>
+                            @if(!Auth::guest())
+                            <li><a href="javascript:void(0)"><i class="ti-user m-r-5"></i> {{Auth::user()->name}}</a></li>
+                            @endif
                             <li><a href="javascript:void(0)"><i class="ti-settings m-r-5"></i> Settings</a></li>
                             <li><a href="javascript:void(0)"><i class="ti-lock m-r-5"></i> Lock screen</a></li>
-                            <li><a href="javascript:void(0)"><i class="ti-power-off m-r-5"></i> Logout</a></li>
+                            <li><a href="{{ url('/logout') }}"
+                                   onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                    <i class="ti-power-off m-r-5"></i> Logout
+                                    </a>
+
+                                <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                                    {{ csrf_field() }}
+                                </form></li>
                         </ul>
                     </li>
                 </ul>

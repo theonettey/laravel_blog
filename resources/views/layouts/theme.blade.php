@@ -14,6 +14,7 @@
     <link href="{{URL::asset('assets/css/icons.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{URL::asset('assets/css/pages.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{URL::asset('assets/css/responsive.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{URL::asset('css/animate.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{URL::asset('css/custom.css')}}" rel="stylesheet" type="text/css" />
 
     <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -37,6 +38,8 @@
 
         <div class="content">
             <div class="container">
+                <!--Our notification system-->
+                @include('shared.noty')
                 @yield('working_area')
             </div>
         </div>
@@ -88,5 +91,6 @@
 <!-- App js -->
 <script src="{{URL::asset("assets/js/jquery.core.js")}}"></script>
 <script src="{{URL::asset("assets/js/jquery.app.js")}}"></script>
+<script src="{{URL::asset("js/custom.js")}}"></script>
 </body>
 </html>

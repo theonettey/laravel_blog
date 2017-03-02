@@ -1,3 +1,13 @@
 .has-error{
     color:red;
 }
+
+.alert{
+    color:white;
+    position:absolute;
+    top:60px;
+    right: 20px;
+    z-index: 5;
+    /*opacity: 0.9;*/
+    background-color: #0b0b0b;
+}

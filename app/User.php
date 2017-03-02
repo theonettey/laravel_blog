@@ -29,4 +29,10 @@ class User extends Authenticatable
     ];
 
     use SoftDeletes;
+
+    //defining realtionships
+
+    public function Article(){
+        return $this->hasMany(Article::class);
+    }
 }

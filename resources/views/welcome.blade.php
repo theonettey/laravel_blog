@@ -1,12 +1,14 @@
 @extends('layouts.theme')
 
 @section('working_area')
+    @if(!empty($articles))
 
+        @foreach($articles as $article)
     <div class="col-lg-4">
         <div class="portlet">
             <div class="portlet-heading bg-primary">
                 <h3 class="portlet-title">
-                    Article Title
+                    {{$article->title}}
                 </h3>
                 <div class="portlet-widgets">
                     <a href="javascript:;" data-toggle="reload"><i class="zmdi zmdi-refresh"></i></a>
@@ -17,11 +19,16 @@
             </div>
             <div id="bg-primary1" class="panel-collapse collapse in">
                 <div class="portlet-body">
-                        Brief description
+                        {{$article->body}}
                 </div>
+                <hr>
+
+                <p>Written by: {{$article->user->name}}</p>
             </div>
         </div>
     </div>
+@endforeach
+    @endif
 
 
 @endsection
