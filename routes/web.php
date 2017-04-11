@@ -11,16 +11,30 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+//Route::get('/home', 'HomeController@index');
 
 Route::group(['middleware'=>'auth'],function(){
 
-
+    Route::get('/', 'ArticleController@index');
     Route::resource('article','ArticleController');
 });
+Route::group(['middleware'=>'auth'],function(){
+
+    Route::post('article/{article}/comment', 'CommentController@store');
+    Route::delete('comment/{comment}/delete', 'CommentController@destroy');
+//    Route::resource('comment','CommentController');
+});
+Route::group(['middleware'=>'auth'],function(){
+
+    Route::resource('myarticles/', 'MyArticlesController');
+//    Route::resource('comment','CommentController');
+});
+
+
