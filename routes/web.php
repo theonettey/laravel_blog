@@ -33,7 +33,7 @@ Route::group(['middleware'=>'auth'],function(){
 });
 Route::group(['middleware'=>'auth'],function(){
 
-    Route::resource('myarticles/', 'MyArticlesController');
+    Route::resource('personal/', 'PersonalArticleController');
 //    Route::resource('comment','CommentController');
 });
 

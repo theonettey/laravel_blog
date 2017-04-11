@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\ArticleController;
 
-class MyArticlesController extends Controller
+class PersonalArticleController extends Controller
 {
     /**
      * Display a listing of the resource.

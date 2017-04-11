@@ -17,18 +17,11 @@
                     <ul class="list-unstyled">
                         <li><a href="{{url(route('article.create'))}}">Create new</a></li>
                         <li><a href="{{url(route('article.index'))}}">View All Articles</a></li>
-                        <li><a href="/myarticles">My articles</a></li>
+                        <li><a href="/personal">Personal articles</a></li>
 
                     </ul>
                 </li>
-                <li class="has_sub">
-                    <a href="javascript:void(0);" class="waves-effect"><i class="fa fa-comments"></i> <span> Comment </span> <span class="menu-arrow"></span> </a>
-                    <ul class="list-unstyled">
-                        <li><a href="">View Comments</a></li>
 
-
-                    </ul>
-                </li>
 
 
 

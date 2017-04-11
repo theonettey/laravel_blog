@@ -4,8 +4,8 @@
     <!-- LOGO -->
     <div class="topbar-left">
         <div class="text-center">
-            <a href="index.html" class="logo">
-                <i class="zmdi zmdi-toys icon-c-logo"></i><span>Blog<span>Tech</span></span>
+            <a href="/" class="logo">
+                <i class="zmdi zmdi-toys icon-c-logo"></i><span>Theo's <span>Newsroom</span></span>
                 <!--<span><img src="assets/images/logo.png" alt="logo" style="height: 20px;"></span>-->
             </a>
         </div>
@@ -22,28 +22,25 @@
                     <span class="clearfix"></span>
                 </div>
 
-                <form role="search" class="navbar-left app-search pull-left hidden-xs">
-                    <input type="text" placeholder="Search..." class="form-control">
-                    <a href=""><i class="fa fa-search"></i></a>
-                </form>
+
 
 
                 <ul class="nav navbar-nav navbar-right pull-right">
                     <li>
                         <!-- Notification -->
-                        <div class="notification-box">
-                            <ul class="list-inline m-b-0">
-                                <li>
-                                    <a href="javascript:void(0);" class="right-bar-toggle">
-                                        <i class="zmdi zmdi-notifications-none"></i>
-                                    </a>
-                                    <div class="noti-dot">
-                                        <span class="dot"></span>
-                                        <span class="pulse"></span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+                        {{--<div class="notification-box">--}}
+                            {{--<ul class="list-inline m-b-0">--}}
+                                {{--<li>--}}
+                                    {{--<a href="javascript:void(0);" class="right-bar-toggle">--}}
+                                        {{--<i class="zmdi zmdi-notifications-none"></i>--}}
+                                    {{--</a>--}}
+                                    {{--<div class="noti-dot">--}}
+                                        {{--<span class="dot"></span>--}}
+                                        {{--<span class="pulse"></span>--}}
+                                    {{--</div>--}}
+                                {{--</li>--}}
+                            {{--</ul>--}}
+                        {{--</div>--}}
                         <!-- End Notification bar -->
                     </li>
 
